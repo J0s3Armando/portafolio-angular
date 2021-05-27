@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './share/header/header.component';
@@ -8,6 +9,7 @@ import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { ItemComponent } from './pages/item/item.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AppRoutingModule } from './modules/route-module.module';
+
 
 @NgModule({
   declarations: [
@@ -20,9 +22,12 @@ import { AppRoutingModule } from './modules/route-module.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
