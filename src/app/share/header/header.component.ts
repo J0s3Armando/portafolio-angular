@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoPageService } from 'src/app/services/info-page.service';
 
+import { Router } from "@angular/router";
 
 
 @Component({
@@ -10,9 +11,18 @@ import { InfoPageService } from 'src/app/services/info-page.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor( public _infoService: InfoPageService ) { }
+  constructor( public _infoService: InfoPageService, private router:Router ) { }
 
   ngOnInit(): void {
+  }
+
+  searchProduct( item: string )
+  {
+    if(item.length < 1 )
+    {
+      return;
+    }
+    this.router.navigate(['/search', item.toLowerCase()]);
   }
 
 }

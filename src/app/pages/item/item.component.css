@@ -1,0 +1,11 @@
+.capitalize-font
+{
+    text-transform: capitalize;
+}
+
+.item-inside__meta
+{
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 0.7em;
+    padding: 1em;
+}
